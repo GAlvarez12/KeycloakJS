@@ -1,8 +1,10 @@
 {
-    "realm": "hi5code",
-    "auth-server-url": "http://localhost:8080/auth/",
-    "ssl-required": "external",
-    "resource": "hi5code-js",
-    "public-client": true,
-    "confidential-port": 0
+  "realm": "Bellotahub",
+  "auth-server-url": "http://192.168.51.140:9080/",
+  "ssl-required": "external",
+  "resource": "clikey",
+  "public-client": true,
+  "verify-token-audience": true,
+  "use-resource-role-mappings": true,
+  "confidential-port": 0
   }
