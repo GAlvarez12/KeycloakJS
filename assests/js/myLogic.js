@@ -15,6 +15,7 @@ function constructTableRows(keycloakToken) {
     document.getElementById('row-lastName').innerHTML = keycloakToken.family_name;
     document.getElementById('row-name').innerHTML = keycloakToken.name;
     document.getElementById('row-email').innerHTML = keycloakToken.email;
+    console.log(keycloakToken);
 }
 
 function pasteToken(token){
@@ -31,5 +32,5 @@ var refreshToken = function() {
 }
 
 var logout = function() {
-    keycloak.logout({"redirectUri":"http://localhost:9091/logout.html"});
+    keycloak.logout({"redirectUri":"http://localhost:80/keycloak/logout.html"});
 }
