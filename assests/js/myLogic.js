@@ -4,9 +4,18 @@ function initKeycloak() {
     keycloak.init({onLoad: 'login-required'}).then(function() {
         constructTableRows(keycloak.idTokenParsed);
         pasteToken(keycloak.token);
+        getRoles(keycloak.realmAccess);
+        console.log(keycloak);
+        //alert(JSON.stringify(keycloak.tokenParsed)); 
     }).catch(function() {
         alert('failed to initialize');
     });
+}
+
+//Funcion creada para obtener los roles
+function getRoles(keycloakRoles){
+    console.log(keycloakRoles);
+    //alert(keycloakRoles.roles[4]);
 }
 
 function constructTableRows(keycloakToken) {
